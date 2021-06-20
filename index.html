@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Marcos Castro Ponto Com</title>
+
+    <script>
+        $(document).ready(function(){
+            $("#image").css("margin-top", "200px");
+
+            $("#image").click(function(){
+                $("#image").css("margin-top", "0px");
+                $("#image").attr("src", "mastro.jpg");
+                $("#image").attr("width", "1000px");
+                $("#image").attr("height", "1000px");
+
+                $("audio").attr("src", "grito.mp3");
+
+                let i;
+                for(i = 0; i < 9999; i++){
+                    $("#image").animate({
+                        marginleft: '+=30px',
+                        marginTop: '+=30px'
+                        
+                    }, 10);
+
+                    $("#image").animate({
+                        marginleft: '-=30px',
+                        marginTop: '-=30px'
+
+                    }, 10);
+                }
+                
+            });
+        }); 
+    </script>
+
+    <style>
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <audio controls autoplay hidden>
+        <source src="medo.mp3" type="audio/mpeg">
+    </audio>
+
+    <img id="image" src="vito.jpg" alt="muahahah">
+</body>
+</html>
